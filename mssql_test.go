@@ -22,7 +22,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/alexbrainman/odbc/api"
+	"github.com/gooxion/odbc/api"
 )
 
 var (
@@ -1065,7 +1065,7 @@ func TestMSSQLDeleteNonExistent(t *testing.T) {
 	exec(t, db, "drop table dbo.temp")
 }
 
-// https://github.com/alexbrainman/odbc/issues/14
+// https://github.com/gooxion/odbc/issues/14
 func TestMSSQLDatetime2Param(t *testing.T) {
 	db, sc, err := mssqlConnect()
 	if err != nil {
@@ -1097,7 +1097,7 @@ func TestMSSQLDatetime2Param(t *testing.T) {
 	exec(t, db, "drop table dbo.temp")
 }
 
-// https://github.com/alexbrainman/odbc/issues/19
+// https://github.com/gooxion/odbc/issues/19
 func TestMSSQLMerge(t *testing.T) {
 	db, sc, err := mssqlConnect()
 	if err != nil {
@@ -1163,7 +1163,7 @@ func TestMSSQLMerge(t *testing.T) {
 	exec(t, db, "drop table dbo.temp")
 }
 
-// https://github.com/alexbrainman/odbc/issues/20
+// https://github.com/gooxion/odbc/issues/20
 func TestMSSQLSelectInt(t *testing.T) {
 	db, sc, err := mssqlConnect()
 	if err != nil {
@@ -1181,7 +1181,7 @@ func TestMSSQLSelectInt(t *testing.T) {
 	}
 }
 
-// https://github.com/alexbrainman/odbc/issues/21
+// https://github.com/gooxion/odbc/issues/21
 func TestMSSQLTextColumnParam(t *testing.T) {
 	db, sc, err := mssqlConnect()
 	if err != nil {
@@ -1367,7 +1367,7 @@ func TestMSSQLRawBytes(t *testing.T) {
 	exec(t, db, "drop table dbo.temp")
 }
 
-// https://github.com/alexbrainman/odbc/issues/27
+// https://github.com/gooxion/odbc/issues/27
 func TestMSSQLUTF16ToUTF8(t *testing.T) {
 	s := []uint16{0x47, 0x75, 0x73, 0x74, 0x61, 0x66, 0x27, 0x73, 0x20, 0x4b, 0x6e, 0xe4, 0x63, 0x6b, 0x65, 0x62, 0x72, 0xf6, 0x64}
 	if api.UTF16ToString(s) != string(utf16toutf8(s)) {
